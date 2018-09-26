@@ -51,6 +51,7 @@ body{
     text-align: center;
     resize: none;
     padding-top: 36px;
+    font-size: 1.3rem;
       
 }   
 
@@ -78,7 +79,24 @@ button{
     padding: 10px;
 }
 
+.list_tarefas{
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+.new_tarefa{
+    list-style: none;
+    width: 100%;
+    padding: 0; 
+    margin: 0;
+}
 
+.text_new-tarefas{
+    width: 100%;
+    font-size: 1.1rem;
+    margin: 7px 0px 12px 6px;
+
+}
 /* cores projeto */
 /* #e0c3fc, #8ec5fc, #ba7af8 */
 
