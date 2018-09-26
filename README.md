@@ -1,6 +1,6 @@
 # Projeto 2 - To Do List
 
-**Projeto criado em parceria com [GitHub](http://github.com/alessouza) **
+**Projeto criado em parceria com [Ale Souza](http://github.com/alessouza) **
 Criaremos uma **"Lista de tarefas"** para organizar e priorizar tarefas.
 Como objetivo exercitar os conhecimento adquiridos em HTML, CSS, Javascript e Lógica.
 
