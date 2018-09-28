@@ -1,6 +1,10 @@
 # Projeto 2 - To Do List
 
+Segue projeto na íntegra: [Projeto To do List](https://codepen.io/brunellihellen/pen/mzddLo)
+
+
 **Projeto criado em parceria com [Ale Souza](http://github.com/alessouza) **
+
 Criaremos uma **"Lista de tarefas"** para organizar e priorizar tarefas.
 Como objetivo exercitar os conhecimento adquiridos em HTML, CSS, Javascript e Lógica.
 

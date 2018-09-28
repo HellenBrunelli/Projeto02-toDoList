@@ -15,8 +15,6 @@ body{
     background: linear-gradient(-90deg, #8ec5fc, #e0c3fc);
     display: flex;
     align-items: center;
-  
-    
 }
 
 .container{
@@ -26,11 +24,11 @@ body{
     justify-items: center;
     flex-direction: column;
     height: 80%;
-    
 }
 
 .box_tarefas{
     background-color: white;
+    
 }
 
 /* div */
@@ -39,7 +37,14 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
 
+/* label */
+.text_tarefas{
+	margin: 20px 0;
+	font-weight: bold;
+	font-size: 1.3rem;
+	color: #ba7af8;
 }
 
 /* input */
@@ -51,16 +56,8 @@ body{
     text-align: center;
     resize: none;
     padding-top: 36px;
-    font-size: 1.3rem;
-      
+    font-size: 1.5rem; 
 }   
-
-
-/* label */
-.text_tarefas{
-    margin: 20px 0;
-    font-weight: bold;
-}
 
 .btn{
 
@@ -77,33 +74,63 @@ button{
     letter-spacing: 2px;
     font-weight: bold;
     padding: 10px;
+    border: solid 2px #ccc;
 }
 
+/* Lista de tarefas */
 .list_tarefas{
     width: 100%;
-    list-style: none;
-    padding: 0;
-}
+    }
+
+/* formatação de Linha criada em JS */
 .new_tarefa{
-    list-style: none;
     width: 100%;
-    padding: 0; 
-    margin: 0;
+		padding: 10px;
+		
+    border-bottom: solid 1px #ccc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
+
+/* formatação de texto criado em JS */
 .text_new-tarefas{
-    width: 100%;
+    width: 70%;
     font-size: 1.1rem;
-    margin: 7px 0px 12px 6px;
-
+    
 }
-/* cores projeto */
-/* #e0c3fc, #8ec5fc, #ba7af8 */
 
+.text_new-tarefas.checked{
+    margin: 7px 0px 12px 6px;
+    text-decoration: line-through;
+    color: #ccc;
+}
 
-/* Desktop first */
+.btn_del{
+    width: 15px;
+    text-align: center;
+    background-color: transparent;
+    color: #ccc;
+		border: none;
+		color: #ba7af8;
+}
+
+.btn_checked{
+    width: 50%;
+}
+
+.btn_clean{
+    width: 50%;
+    
+}
+
+/* MEDIA QUERY DESKTOP FIRST */
+
 @media (max-width: 420px) {
     .container {
-        width: 50%;
+					width: 100%;
+					height: 65%;
+					margin: 57px;
     }
 }

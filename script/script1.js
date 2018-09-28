@@ -17,34 +17,25 @@ const clean = document.createElement("button");
 clean.className = "btn_clean";
 clean.innerHTML = `clean`
 
-
-//tirando formatação quando o usuario clica na area de texto
+//tirando ormatação quando o usuario clica na area de texto
 inputText.addEventListener("click", function (e) {
+    e.preventDefault();
+
     inputText.removeAttribute("placeholder");
     inputText.style.padding = "5px";
+
 })
-
-inputText.addEventListener("keypress", function (e){
-    if(e.charCode === 13){
-        add();
-    } else{
-        return false
-    }
-})
-
-
 
 //escute o evento do botão ADD
-button.addEventListener("click", add)
-
-function add (){
+button.addEventListener("click", function (e) {
+    e.preventDefault();
 
     //checando se campo esta vazio
     if (inputText.value === undefined || inputText.value === null || inputText.value === 0 || !inputText.value.trim()) {
         inputText.focus();
         return false;
     }
-    //****** CRIANDO *******
+        //****** CRIANDO *******
 
     //criando linha que comportara a tarefa
     const linha = document.createElement("div");
@@ -79,7 +70,7 @@ function add (){
         this.classList.toggle("checked")
 
     })
-
+    
 
     //deixando o input vazio novamente
     inputText.value = " ";
@@ -91,69 +82,40 @@ function add (){
     })
 
 
-}
-
-// FINAL DO BOTAO ADD.
-
-
-
-box.insertBefore(checked, box.childNodes[box.length]);
-box.insertBefore(clean, box.childNodes[box.length]);
-
-
-
-
-
-// BOTAO CHECAR GERAL
-checked.addEventListener("click", function (e) {
-    e.preventDefault();
-    
-
-    //criando variavel que recebe a classe (CSS) em comum do meu input 
-    allTexts = document.querySelectorAll(".text_new-tarefas");
-
-    this.classList.toggle("active");
-    //se o botao(this) contem a classe active
-    if (this.classList.contains("active")) {
-        //insere no elemento botao um texto
-        this.innerHTML = "UnCkeck All";
-
-        //Percorre a nodelist 
-        for (let item of allTexts) {
-            //toggle é alternancia entre a classe q neste caso é allTexts e seleciona e desseleciona o checked do css
-            item.classList.toggle("checked");
-        }
-    }else{
-        this.innerHTML = "Ckeck All"
-        //Percorre a nodelist 
-        for (let item of allTexts) {
-            //toggle é alternancia entre a classe q neste caso é allTexts e seleciona e desseleciona o checked do css
-            item.classList.toggle("checked");
-        } 
-
-    }
-
-
-    // //Percorre a nodelist 
-    // for (let item of allTexts) {
-    //     //toggle é alternancia entre a classe q neste caso é allTexts e seleciona e desseleciona o checked do css
-    //     item.classList.toggle("checked");
-    // }
-
 })
 
-// BOTAO LIMPAR GERAL
-clean.addEventListener("click", function (e) {
-    e.preventDefault();
+//FINAL DO BOTAO ADD.
 
-    //criando variavel que recebe a classe (CSS) em comum do meu input 
-    const geral = document.querySelectorAll(".new_tarefa");
+// box.insertBefore(checked, box.childNodes[box.length]);
+// box.insertBefore(clean, box.childNodes[box.length]);
+
+// // BOTAO CHECAR GERAL
+// checked.addEventListener("click", function (e) {
+//     e.preventDefault();
+
+//     //criando variavel que recebe a classe (CSS) em comum do meu input 
+//     allTexts = document.querySelectorAll(".text_new-tarefas");
+
+//     //Percorre a nodelist 
+//     for (let item of allTexts) {
+//         //toggle é alternancia entre a classe q neste caso é allTexts e seleciona e desseleciona o checked do css
+//         item.classList.toggle("checked");
+//     }
+
+// })
+
+// // BOTAO LIMPAR GERAL
+// clean.addEventListener("click", function (e) {
+//     e.preventDefault();
+
+//     //criando variavel que recebe a classe (CSS) em comum do meu input 
+//     const geral = document.querySelectorAll(".new_tarefa");
 
 
-    //Percorre a nodelist 
-    for (let item of geral) {
-        item.remove();
+//     //Percorre a nodelist 
+//     for (let item of geral) {
+//         item.remove();
 
-    }
+//     }
 
-})
+// })
